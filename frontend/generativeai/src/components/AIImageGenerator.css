@@ -1,0 +1,272 @@
+/* Global Styles */
+html,
+body {
+    height: 100%;
+    /* Ensures the body takes full height */
+    margin: 0;
+    /* Resets default margin */
+    display: block;
+    /* Default display */
+}
+
+/* Centering the container vertically using padding */
+.body {
+    padding-top: calc(50vh - 512px);
+    /* Centering based on half viewport height minus half container height (adjust 512px based on your container height) */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1024px;
+    /* Maintain existing width */
+    width: 100%;
+    /* Allow responsiveness */
+    padding: 24px;
+    background-color: #f7fafc;
+    /* Gray 100 */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+/* Title Styles */
+.title {
+    font-size: 2.5rem;
+    /* Increased size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+    /* mb-8 */
+    color: #4f46e6;
+    /* Gray 900 */
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    /* Increased gap */
+}
+
+/* Section Styles */
+.section {
+    background-color: #ffffff;
+    /* White */
+    padding: 24px;
+    /* p-6 */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+    /* Smooth shadow transition */
+}
+
+.section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    /* Shadow on hover */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.75rem;
+    /* Increased size */
+    font-weight: 600;
+    /* font-semibold */
+    margin-bottom: 16px;
+    /* mb-4 */
+    color: #4f46e6;
+    /* Gray 600 */
+}
+
+/* Image Preview Styles */
+.image-preview {
+    border: 2px dashed #e2e8f0;
+    /* Gray 300 */
+    border-radius: 12px;
+    padding: 16px;
+    /* p-4 */
+    text-align: center;
+    transition: border-color 0.3s ease;
+    /* Smooth border color transition */
+    width: 92%;
+    /* Ensure full width */
+    height: 300px;
+    /* Fixed height for the image preview */
+    overflow: hidden;
+    /* Prevent overflow for images */
+}
+
+.image-preview h2 {
+    height: 48px;
+    /* Optional: Limit title height */
+}
+
+/* Maintain aspect ratio for images */
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    /* Ensure the image does not exceed the preview area */
+    object-fit: contain;
+    /* Maintain aspect ratio while scaling */
+    margin: 0 auto;
+}
+
+/* Output Image Section Fixed Size */
+.output-image-preview {
+    height: 300px;
+    /* Fixed height for the output preview */
+}
+
+/* Upload Icon Styles */
+.upload-icon {
+    font-size: 3rem;
+    /* text-5xl */
+    color: #cbd5e0;
+    /* Gray 400 */
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.upload-icon:hover {
+    color: #4299e1;
+    /* Blue 500 on hover */
+}
+
+/* Error Message Styles */
+.error-message {
+    margin-top: 16px;
+    background-color: #fed7e2;
+    /* Pink 100 */
+    border: 1px solid #fbbf24;
+    /* Yellow 400 */
+    color: #b91c1c;
+    /* Red 700 */
+    padding: 12px 16px;
+    /* px-4 py-3 */
+    border-radius: 12px;
+}
+
+/* Processing Styles */
+.processing {
+    text-align: center;
+}
+
+.processing-icon {
+    font-size: 2.5rem;
+    /* text-4xl */
+    color: #3b82f6;
+    /* Blue 500 */
+    animation: spin 1s infinite linear;
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hidden Styles */
+.hidden {
+    display: none;
+}
+
+.reset-button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space above the button */
+}
+
+.reset-button {
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.reset-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+/* AIImageGenerator.css */
+
+.reset-button-container {
+    display: flex;
+    justify-content: center;
+    /* Center the button horizontally */
+    margin-top: 20px;
+    /* Space above the button */
+}
+
+.reset-button {
+    background-color: #007bff;
+    /* Blue background */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    /* Vertical and horizontal padding */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions for background color and scale */
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+    /* Slightly scale up on hover */
+}
+
+.reset-button:focus {
+    outline: none;
+    /* Remove default outline */
+}
+/* AIImageGenerator.css */
+
+/* Reuse the existing styles for the reset button */
+.select-file-button {
+    background-color: #007bff;
+    /* Blue background */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    /* Vertical and horizontal padding */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions for background color and scale */
+}
+
+.select-file-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+    /* Slightly scale up on hover */
+}
+
+.select-file-input {
+    display: none;
+    /* Hide the actual file input */
+}
